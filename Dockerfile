@@ -8,7 +8,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -ldflags "-s -X main.Version=${VERSION} -X
 
 FROM alpine:latest AS build-stage-02
 
-RUN apk add --update --no-cache unzip git
+RUN apk add --update --no-cache unzip git curl
 
 WORKDIR /tmp
 RUN wget https://github.com/rsms/inter/releases/download/v3.19/Inter-3.19.zip && unzip Inter-3.19.zip
