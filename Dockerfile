@@ -8,13 +8,13 @@ RUN CGO_ENABLED=0 GOOS=linux go build -ldflags "-s -X main.Version=${VERSION} -X
 
 FROM alpine:latest AS build-stage-02
 
-RUN apk add --update --no-cache unzip git curl
+RUN apk add --update --no-cache unzip git
 
 WORKDIR /tmp
 RUN wget https://github.com/rsms/inter/releases/download/v3.19/Inter-3.19.zip && unzip Inter-3.19.zip
 RUN wget https://github.com/lay295/TwitchDownloader/releases/download/1.52.2/TwitchDownloaderCLI-1.52.2-LinuxAlpine-x64.zip && unzip TwitchDownloaderCLI-1.52.2-LinuxAlpine-x64.zip
 
-RUN git clone https://github.com/xenova/chat-downloader.git
+RUN git clone https://github.com/xenova/chat-downloader.git curl
 
 FROM alpine:latest AS production
 
