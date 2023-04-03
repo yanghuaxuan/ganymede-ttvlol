@@ -4,7 +4,7 @@
     <img src=".github/ganymede-logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h2 align="center">Ganymede</h2>
+  <h2 align="center">Ganymede TTVLOL</h2>
 
   <p align="center">
     Twitch VOD and Stream archiving platform with a rendered chat. Files are saved in a friendly format allowing for use without Ganymede.
